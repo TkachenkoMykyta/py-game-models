@@ -22,7 +22,7 @@ def main() -> None:
             )
 
         # Race
-        race_data = player_data["race"]
+        race_data = player_data.get("race")
         race, _ = Race.objects.get_or_create(
             name=race_data["name"],
             defaults={
